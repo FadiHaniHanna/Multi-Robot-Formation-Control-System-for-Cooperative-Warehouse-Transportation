@@ -4,6 +4,12 @@ Three small Mecanum-wheel robots that detect a box, form up around it, lift it t
 
 Team project, German International University (GIU), Spring 2026. Authors are listed in the [IEEE-style paper](docs/IEEE%20Conference%20Paper.pdf).
 
+## Demo
+
+[![Two robots forming up, lifting and carrying a box to the goal](images/demo-preview.gif)](videos/two-robot-box-transport-demo.mp4)
+
+Overhead-camera view, sped up 6x. Click the preview for the full 72-second video.
+
 ![System architecture](images/System%20Architecture.png)
 
 ## What it does
@@ -40,6 +46,10 @@ The team built three Mecanum-wheel robots. The final demonstrator completed this
 
 - Low-level closed-loop control for the four Mecanum-wheel DC motors on each of the three robots, using encoder feedback, including PID tuning for velocity tracking
 - ArUco marker-based detection and localization, publishing robot poses to the ROS 2 formation-control framework
+
+## Code
+
+- [`firmware/motor_speed_tuning`](firmware/motor_speed_tuning): my ESP32 wheel-speed tuning firmware (feedforward + gain-scheduled PI, Mecanum kinematics, Serial test commands)
 
 ## Documentation
 
